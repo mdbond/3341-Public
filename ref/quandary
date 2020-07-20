@@ -1,0 +1,7 @@
+#!/bin/bash
+
+MYDIR=`dirname $BASH_SOURCE`
+
+java -cp "$MYDIR/java-cup-11b-runtime.jar:$MYDIR/quandary-obfuscated.jar" -ss1g -ea interpreter.Interpreter $*
+
+echo Quandary process returned $?

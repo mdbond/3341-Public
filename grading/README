@@ -1,0 +1,29 @@
+
+USAGE
+
+  ./grade.sh SUBMISSION_TGZ REF_IMPL TESTCASE_LIST TESTCASE_DIR
+
+- SUBMISSION_TGZ is the submitted .tgz TESTCASE_FILE
+
+- REF_IMPL is the script to run the Quandary reference implementation (used for comparison purposes)
+
+- TESTCASE_LIST is a text file that specifies a test case on each line the following format: 
+
+  POINTS PROGRAM INPUT 
+
+  where POINTS is the number of points the test case is worth,
+        PROGRAM is the file containing the Quandary program (located in TESTCASE_DIR), and
+        INPUT is the integer input to the program.
+
+- TESTCASE_DIR is the location of the program files listed TESTCASE_LIST
+
+Make sure JFLEX_DIR and CUP_DIR are set correctly for your system before running grade.sh.
+
+EXAMPLE
+
+Here's an example run that should work from 3341-Public if you provide it myfirstproject.tgz:
+
+  ./grade.sh myfirstproject.tgz ../ref/quandary testcases-example.dat ../examples
+
+The file *-example.dat files give test cases for which each project should execute correctly.
+The point values are made up.

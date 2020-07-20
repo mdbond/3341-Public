@@ -1,0 +1,57 @@
+package parser;
+
+import java.util.*;
+import java.io.*;
+import java_cup.runtime.Symbol;
+import java_cup.runtime.ComplexSymbolFactory.ComplexSymbol;
+import java_cup.runtime.ComplexSymbolFactory;
+
+import ast.*;
+import interpreter.Interpreter;
+
+parser code {: 
+  Lexer lexer;
+
+  public Parser(Lexer lex, ComplexSymbolFactory sf) {
+    super(lex, sf);
+    lexer = lex;
+  }
+
+  public void report_fatal_error(String message, Object info) {
+    Interpreter.fatalError(message + " (" + info + ")", Interpreter.EXIT_PARSING_ERROR);
+  }
+
+  Location loc(int line, int column) {
+    return new Location(line, column);
+  }
+
+:};
+
+terminal PLUS, MINUS, LPAREN, RPAREN;
+terminal Long    INTCONST;
+
+non terminal Program         program;
+non terminal Expr            expr;
+non terminal BinaryExpr      binaryExpr;
+
+precedence left PLUS, MINUS;
+
+start with program;
+
+program ::= expr:e
+            {: RESULT = new Program(e, loc(eleft, eright)); :}
+         ;
+
+expr ::= INTCONST:c
+         {: RESULT = new ConstExpr(c, loc(cleft, cright)); :}
+      |  binaryExpr:e
+         {: RESULT = e; :}
+      |  LPAREN expr:e RPAREN
+         {: RESULT = e; :}
+      ;
+
+binaryExpr ::= expr:e1 PLUS expr:e2
+               {: RESULT = new BinaryExpr(e1, BinaryExpr.PLUS, e2, loc(e1left, e1right)); :}
+            |  expr:e1 MINUS expr:e2
+               {: RESULT = new BinaryExpr(e1, BinaryExpr.MINUS, e2, loc(e1left, e1right)); :}
+            ;
