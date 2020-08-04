@@ -21,7 +21,7 @@ Make sure JFLEX_DIR and CUP_DIR are set correctly for your system before running
 
 EXAMPLE
 
-Here's an example run that should work from 3341-Public if you provide it myfirstproject.tgz:
+Here's an example run that should work from 3341-Public/quandary if you provide it myfirstproject.tgz:
 
   ./grade.sh myfirstproject.tgz ../ref/quandary testcases-example.dat ../examples
 

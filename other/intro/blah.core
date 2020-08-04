@@ -1,0 +1,13 @@
+program
+ int x,y,z;
+begin
+ x := 0;
+ y := 5;
+ z := 3;
+ while x < 50
+ begin
+   x := x + y + z;
+ endwhile;
+ output x;
+end
+
