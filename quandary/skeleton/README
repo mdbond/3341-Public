@@ -1,11 +1,13 @@
 BUILDING AND RUNNING
 
-To get started, set two environment variables to your locations of JFlex and CUP. For example:
+To get started, download and extract JFlex and CUP, and
+set two environment variables to your locations of JFlex and CUP. For example:
 
   export JFLEX_DIR=$HOME/jflex-1.7.0
   export CUP_DIR=$HOME/cup
 
-I'm using JFlex 1.7.0 (https://jflex.de/release/jflex-1.7.0.tar.gz) and
+The simplest option is to just download and extract the same versions I'm using:
+JFlex 1.7.0 (https://jflex.de/release/jflex-1.7.0.tar.gz) and
 CUP 0.11b-20160615 (http://www2.cs.tum.edu/projects/cup/releases/java-cup-bin-11b-20160615.tar.gz).
 
 To build the lexer, parser, and interpreter:
@@ -18,25 +20,10 @@ To run the interpreter:
 
 Run without any arguments to see supported options.
 
-SKELETON DESCRIPTION
-
-The skeleton provides a lot of Quandary functionality,
-but several things are missing or (intentionally) don't work correctly.
-You can search for "TODO" in the source code to find the missing and incorrect stuff. Here's a summary:
-
-- The lexer and parser don't support [ expr1 OP expr2 ] syntax. <-- 1st project
-- It doesn't recognize free statements. <-- 1st project
-- Local variables aren't handled correctly: every variable is treated like a global variable. <-- 1st project
-- It's missing support for static and dynamic type checking. <-- 2nd project
-- It's missing support for garbage collection (automatic memory management) and explicit memory management. <-- 3rd project
-- It's missing support for concurrency. <-- 4th project
-
-Project assignments and descriptions are on Carmen.
-
 If you have any questions or problems with the skeleton or the reference implementation,
 first see 3341-Public/quandary/TROUBLESHOOTING. If you can't figure out the issue,
 make a public Piazza post. You're probably not the only person with the same question or issue,
-and/or you may have found a ($10) bug in the reference implementation.
+and/or you may have found a ($20) bug in the reference implementation.
 
 When working on your interpreter this semester, make sure that you don't make your modified interpreter
 a public project on GitHub (or publicly available in any other way).
@@ -47,7 +34,7 @@ that allows private projects: https://education.github.com/discount_requests/new
 MISCELLANEOUS
 
 Don't modify files that are generated automatically by JFlex or CUP. To see which files aren't
-generated automatically, run "make clean".
+generated automatically, run "make clean" to eliminate generated files.
 
 SUBMITTING A PROJECT
 
@@ -56,7 +43,7 @@ where MY_PROJECT_DIR is the location of your project (the directory containing t
 
   tar --exclude='.git*' -cf - -C MY_PROJECT_DIR . | gzip > myproject.tgz
 
-That command creates myproject.tgz in the current directory.
+That command creates myproject.tgz in the directory from which you run the command.
 
 PORTING TO C/C++
 
