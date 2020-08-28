@@ -25,7 +25,7 @@ public class BinaryExpr extends Expr {
         String s = null;
         switch (operator) {
             case PLUS:  s = "+"; break;
-            case MINUS: s = "*"; break;
+            case MINUS: s = "-"; break;
         }
         return expr1 + " " + s + " " + expr2;
     }
