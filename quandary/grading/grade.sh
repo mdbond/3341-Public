@@ -94,4 +94,8 @@ do
   do_one_test $line
 done < $TESTCASES_FILE
 
+# Remove tmp directory
+cd ..
+rm -r $SUBMISSION_DIR
+
 echo Total score: $SCORE out of $MAX_SCORE
