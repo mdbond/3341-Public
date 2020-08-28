@@ -2,3 +2,4 @@
 parser/Lexer.java
 parser/sym.java
 parser/Parser.java
+*.tgz
