@@ -38,12 +38,9 @@ generated automatically, run "make clean" to eliminate generated files.
 
 SUBMITTING A PROJECT
 
-You can use the following command to prepare a submission for upload to Carmen,
-where MY_PROJECT_DIR is the location of your project (the directory containing the quandary script and Makefile):
+Use the following command to prepare a submission for upload to Carmen:
 
-  tar --exclude='.git*' -cf - -C MY_PROJECT_DIR . | gzip > myproject.tgz
-
-That command creates myproject.tgz in the directory from which you run the command.
+  make submission
 
 PORTING TO C/C++
 

@@ -16,6 +16,6 @@ parser/Parser.java: parser/Parser.cup
 clean:
 	rm -f */*.class parser/Lexer.java parser/sym.java parser/Parser.java
 
-submission: default
+submission: clean
 	rm -f myproject.tgz
 	tar czf myproject.tgz *
