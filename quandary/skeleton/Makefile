@@ -1,6 +1,6 @@
 
 SOURCES = $(wildcard */*.java)
-CLASSES = $(SOURCES:.java=.class) parser/Lexer.class parser/sym.class parser/Parser.class 
+CLASSES = $(SOURCES:.java=.class) parser/Lexer.class parser/sym.class parser/Parser.class
 
 default: parser/Lexer.java parser/Parser.java $(CLASSES)
 
@@ -15,3 +15,7 @@ parser/Parser.java: parser/Parser.cup
 
 clean:
 	rm -f */*.class parser/Lexer.java parser/sym.java parser/Parser.java
+
+submission: default
+	rm -f myproject.tgz
+	tar czf myproject.tgz *
