@@ -21,8 +21,8 @@ parser code {:
     Interpreter.fatalError(message + " (" + info + ")", Interpreter.EXIT_PARSING_ERROR);
   }
 
-  Location loc(int line, int column) {
-    return new Location(line, column);
+  ast.Location loc(int line, int column) {
+    return new ast.Location(line, column);
   }
 
 :};
