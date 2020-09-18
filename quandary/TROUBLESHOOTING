@@ -14,6 +14,8 @@ In order for the grade.sh script to work on macOS, you may need to install the c
 
   brew install coreutils
 
+(If the brew command fails, visit http://brew.sh to get Homebrew.)
+
 On "Ubuntu for Windows" you may need to run
 
   sed -i 's/\r$//' quandary
