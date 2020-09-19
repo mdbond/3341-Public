@@ -73,7 +73,7 @@ public class Interpreter {
         } catch (Exception ex) {
             Interpreter.fatalError("Uncaught parsing error: " + ex, Interpreter.EXIT_PARSING_ERROR);
         }
-        //System.out.println(astRoot);
+        //astRoot.println(System.out);
         interpreter = new Interpreter(astRoot);
         Object returnValue = interpreter.exec(gcType, heapBytes, quandaryArg).toString();
         System.out.println("Interpreter returned " + returnValue);
