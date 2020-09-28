@@ -1,5 +1,5 @@
 int main (int arg){
-    if (arg > 0 && (5 != 10)){ /* Result depends on first condition */
+    if (arg > 0 && (5 != 10)){ /* Always false */
         return arg;
     }else {
         return -arg * 238;
