@@ -1,0 +1,21 @@
+2 sBasicCond.q 42       # no calls, no vars
+2 sBasicNested.q 4      # no calls
+2 sComplicatedCond.q 4  # calls randomInt() only
+2 sMoreCond.q 44        # no calls
+2 sTwoFuncDef.q 42      # has function definitions but no calls
+2 sMoreNested.q 4       # no calls
+2 sCondError.q 4        # no calls
+2 square.q 35           # no calls, no stmtlist
+2 abs.q -34632          # no calls
+2 conds.q 42            # no calls, no vars
+2 conds2.q 42           # no calls, no vars
+2 vars.q  42            # no calls
+2 sosimple.q 42         # no calls, no stmtlist, no vars
+2 isodd.q 223           # has everything
+2 lg.q 8234323          # has everything
+2 recurmain.q 5         # calls main
+2 compound.q 22         # no calls
+2 oops.q 22             # no calls
+2 morevars.q 42         # no calls
+2 isPrime.q 17          # no calls
+0 isrefint.q 42         # should fail
