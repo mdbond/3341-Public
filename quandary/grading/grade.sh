@@ -5,7 +5,7 @@ do_one_test() {
     PROGRAM=$2
     INPUT=$3
     shift 3
-    OPTIONS=`echo $* | sed --expression 's/#.*$//'` # removes comments
+    OPTIONS=`echo $* | sed -e 's/#.*$//'` # removes comments
     echo -n "Testing $OPTIONS $PROGRAM $INPUT, worth $POINTS points: "
     # Compare the last line if process returns nonzero code; otherwise compare last two lines
 
