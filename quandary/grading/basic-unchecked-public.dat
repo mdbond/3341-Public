@@ -1,0 +1,17 @@
+ 1         blah.q 15 -heapsize 1638400
+ 1         calc.q 42 -heapsize 1638400
+ 1    fibserial.q 10 -heapsize 1638400
+ 1       primes.q 20 -heapsize 1638400
+ 1      updates.q 42 -heapsize 1638400
+ 1        blarg.q  5 -heapsize 1638400
+ 1       simple.q  8 -heapsize 1638400
+ 1         fact.q 12 -heapsize 1638400
+ 1      primes2.q 25 -heapsize 1638400
+ 1         flip.q 10 -heapsize 1638400
+ 1       simple.q 18 -heapsize 1638400
+ 1         fact.q 19 -heapsize 1638400
+ 1       primes.q 23 -heapsize 1638400
+ 1      primes2.q 22 -heapsize 1638400
+ 1          max.q 15 -heapsize 1638400
+ 1       second.q 20 -heapsize 1638400
+ 1     isrefint.q 42 -heapsize 1638400
