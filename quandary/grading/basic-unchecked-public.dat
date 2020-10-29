@@ -14,4 +14,4 @@
  1      primes2.q 22 -heapsize 1638400
  1          max.q 15 -heapsize 1638400
  1       second.q 20 -heapsize 1638400
- 1     isrefint.q 42 -heapsize 1638400
+ 0     isrefint.q 42 -heapsize 1638400
