@@ -30,9 +30,6 @@
  1       insert.q      42 -heapsize 1638400
  1          max.q      10 -heapsize 1638400
  1  mutablePara.q      42 -heapsize 1638400
- 1        qsort.q      42 -heapsize 1638400
- 1       qsort2.q      42 -heapsize 1638400
- 1       qsort3.q      42 -heapsize 1638400
  1   randomList.q     100 -heapsize 1638400
  1   sideeffect.q      42 -heapsize 1638400
  1  sideeffect2.q      42 -heapsize 1638400
@@ -43,7 +40,4 @@
  1    temproot2.q      10 -heapsize 1638400
  1     twoCells.q 1000000 -heapsize 1638400
  1     updates3.q      42 -heapsize 1638400
- 1       append.q      42 -heapsize 1638400
- 1       append.q      42 -heapsize 1638400
- 1       change.q      42 -heapsize 1638400
  0     isrefint.q      42 -heapsize 1638400
