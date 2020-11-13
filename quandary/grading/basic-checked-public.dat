@@ -19,7 +19,7 @@
 1 inputdep.q 2 -heapsize 1638400
 1 inputdep.q 3 -heapsize 1638400
 1 badappend.q 42 -heapsize 1638400
-1 unnecessarymutables.q 4 -heapsize 16384002
+1 unnecessarymutables.q 4 -heapsize 1638400
 1 depcast.q 1 -heapsize 1638400
 1 depcast.q 2 -heapsize 1638400
 1 baddecls2.q 42 -heapsize 1638400
