@@ -17,6 +17,6 @@ mutable Q main(int arg) {
     mutable Ref counters = 0 . 0;
     int dummy = [ [ doLeftInc(counters) + doLeftInc(counters) ] + [ doLeftInc(counters) + doLeftInc(counters) ] ];
     int value = (int)left(counters);
-    if (value < 10000 || value >= 40000) return value;
+    if (value >= 40000) return value;
     return nil;
 }

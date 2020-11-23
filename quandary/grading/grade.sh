@@ -17,7 +17,7 @@ do_one_test() {
 
     # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
     REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
-    SUB_OUT=$(./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
+    SUB_OUT=$(timeout 5 ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
     # If the ref quandary process exited with a nonzero code, we only care about
     # the quandary process return value (the last line)
     if [[ $(echo "$REF_OUT" | tail -1) != "Quandary process returned 0" ]]; then
