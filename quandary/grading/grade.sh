@@ -15,12 +15,14 @@ do_one_test() {
     #echo ""
     #return
 
-    REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1)
-    if [ "$REF_OUT" != "Quandary process returned 0" ]; then
-        SUB_OUT=$(./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1)
-    else
-        REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
-        SUB_OUT=$(./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
+    # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
+    REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
+    SUB_OUT=$(./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
+    # If the ref quandary process exited with a nonzero code, we only care about
+    # the quandary process return value (the last line)
+    if [[ $(echo "$REF_OUT" | tail -1) != "Quandary process returned 0" ]]; then
+        REF_OUT=$(echo "$REF_OUT" | tail -1)
+        SUB_OUT=$(echo "$SUB_OUT" | tail -1)
     fi
 
     MAX_SCORE=$((MAX_SCORE + POINTS))
