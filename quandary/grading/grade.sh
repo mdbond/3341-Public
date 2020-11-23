@@ -98,3 +98,7 @@ while IFS= read -r line; do
 done <$TESTCASES_FILE
 
 echo Total score: $SCORE out of $MAX_SCORE
+
+if [[ $SCORE -ne $MAX_SCORE ]]; then
+    exit 2
+fi
