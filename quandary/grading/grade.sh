@@ -17,10 +17,10 @@ do_one_test() {
 
     REF_OUT=`$REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
     if [ "$REF_OUT" != "Quandary process returned 0" ]; then
-      SUB_OUT=`./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
+      SUB_OUT=`timeout 5 ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
     else
       REF_OUT=`$REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
-      SUB_OUT=`./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
+      SUB_OUT=`timeout 5 ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
     fi
 
     MAX_SCORE=$((MAX_SCORE + POINTS))
