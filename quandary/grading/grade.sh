@@ -17,10 +17,10 @@ do_one_test() {
 
     REF_OUT=`$REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
     if [ "$REF_OUT" != "Quandary process returned 0" ]; then
-      SUB_OUT=`timeout 5 ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
+      SUB_OUT=`$TIMEOUT ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -1`
     else
       REF_OUT=`$REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
-      SUB_OUT=`timeout 5 ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
+      SUB_OUT=`$TIMEOUT ./quandary $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2`
     fi
 
     MAX_SCORE=$((MAX_SCORE + POINTS))
@@ -28,14 +28,18 @@ do_one_test() {
       echo PASSED
       SCORE=$((SCORE + POINTS))
     else
-      echo FAILED
+      if [ "$SUB_OUT" == "" ]; then
+        echo 'FAILED (timeout?)'
+      else
+        echo FAILED
+      fi
       #echo REF_OUT is $REF_OUT # Enable for debugging
       #echo SUB_OUT is $SUB_OUT # Enable for debugging
     fi
 }
 
-if [ "$#" -ne 4 ]; then
-    echo Usage: grade.sh SUBMISSION_TGZ REF_IMPL TESTCASES_FILE TESTCASE_DIR
+if [ "$#" -ne 4 ] && [ "$#" -ne 5 ]; then
+    echo Usage: grade.sh SUBMISSION_TGZ REF_IMPL TESTCASES_FILE TESTCASE_DIR [TIMEOUT_IN_SECONDS]
     exit
 fi
 
@@ -66,6 +70,10 @@ else
   REF_IMPL=`realpath --relative-to=$SUBMISSION_DIR $2`
   TESTCASES_FILE=`realpath --relative-to=$SUBMISSION_DIR $3`
   TESTCASE_DIR=`realpath --relative-to=$SUBMISSION_DIR $4`
+fi
+TIMEOUT=""
+if [ "$#" -eq 5 ] ; then
+  TIMEOUT="timeout $5"
 fi
 
 # Extract the submitted .tgz to a new directory
