@@ -1,0 +1,12 @@
+6  drfcounter.q    42 -heapsize 1638400 # relies on concurrent execution
+6  drfcounter2.q   42 -heapsize 1638400 # relies on concurrent execution
+6  drfcounter5.q 1000 -heapsize 1638400 # relies on concurrent execution
+6  pcc2.q          42 -heapsize 1638400 # relies on concurrent execution
+6  pcc3.q          42 -heapsize 1638400 # relies on concurrent execution
+6  pcfixed4.q      42 -heapsize 1638400 # relies on concurrent execution
+6  steps.q         42 -heapsize 1638400 # relies on concurrent execution
+6  steps2.q      2468 -heapsize 1638400 # relies on concurrent execution
+6  steps3.q      4000 -heapsize 1638400 # relies on concurrent execution
+6  turns2.q        20 -heapsize 1638400 # relies on concurrent execution
+6  turns2.q        50 -heapsize 1638400 # relies on concurrent execution
+0  isrefint.q      42 -heapsize 1638400

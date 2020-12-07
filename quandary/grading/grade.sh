@@ -100,6 +100,7 @@ if [[ $? -ne 0 ]] ; then
 fi
 
 # Test each test case
+SCORE=0
 while IFS= read -r line
 do
   #echo do_one_test $line
