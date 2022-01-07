@@ -56,7 +56,8 @@ class Consumer extends Thread {
             //while (myObject.pos < i) { /* System.out.println("Waiting"); */ }
             int value = myObject.data[i];
             if (value != 42) {
-                System.out.println("Yikes");
+                System.out.println("Yikes: data[" + i + "] = " + value);
+                while (true) { /* do nothing */ }
             }
         }
         System.out.println("Consumer done");

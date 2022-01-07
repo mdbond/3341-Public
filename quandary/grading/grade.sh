@@ -9,11 +9,11 @@ do_one_test() {
     echo -n "Testing $OPTIONS $PROGRAM $INPUT, worth $POINTS points: "
     # Compare the last line if process returns nonzero code; otherwise compare last two lines
 
-    # Enable to see reference interpreter output only:
-    #echo ""
-    #$REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT
-    #echo ""
-    #return
+    # Uncomment to see reference interpreter output only:
+    # echo ""
+    # $REF_IMPL $OPTIONS -ct 5 $TESTCASE_DIR/$PROGRAM $INPUT
+    # echo ""
+    # return
 
     # Get interpreter return and quandary process return (last 2 lines) of ref and sub implementations
     REF_OUT=$($REF_IMPL $OPTIONS $TESTCASE_DIR/$PROGRAM $INPUT 2>&1 | tail -2)
@@ -35,9 +35,13 @@ do_one_test() {
         else
             echo FAILED
         fi
-        #echo REF_OUT is $REF_OUT # Enable for debugging
-        #echo SUB_OUT is $SUB_OUT # Enable for debugging
+        # Uncomment to debug FAILED test cases only:
+        # echo REF_OUT is $REF_OUT 
+        # echo SUB_OUT is $SUB_OUT
     fi
+    # Uncomment to debug ALL test cases:
+    # echo REF_OUT is $REF_OUT
+    # echo SUB_OUT is $SUB_OUT
 }
 
 if [ "$#" -ne 4 ] && [ "$#" -ne 5 ]; then

@@ -1,3 +1,4 @@
+0 isrefint.q 42 -heapsize 1638400
 1 append.q 42 -heapsize 1638400
 1 badcalc.q 42 -heapsize 1638400
 1 badcast.q 42 -heapsize 1638400
@@ -86,8 +87,8 @@
  1      depcast.q       1 -heapsize 1638400
  1        fact2.q      20 -heapsize 1638400
  1        flip2.q     200 -heapsize 1638400
- 1      garbage.q 1000000 -heapsize 1638400
- 1     garbage2.q 1000000 -heapsize 1638400
+ 1      garbage.q   10000 -heapsize 1638400
+ 1     garbage2.q   10000 -heapsize 1638400
  1    goodlists.q      40 -heapsize 1638400
  1         heap.q       2 -heapsize 1638400
  1     inputdep.q       1 -heapsize 1638400
@@ -104,7 +105,7 @@
  1          sum.q      42 -heapsize 1638400
  1     temproot.q     100 -heapsize 1638400
  1    temproot2.q      10 -heapsize 1638400
- 1     twoCells.q 1000000 -heapsize 1638400
+ 1     twoCells.q   10000 -heapsize 1638400
  1     updates3.q      42 -heapsize 1638400
  1 ssetRightandLeft.q 42 -heapsize 1638400
  1 sfact.q 6 -heapsize 1638400
@@ -130,8 +131,84 @@
  1            third.q      20 -heapsize 1638400
  1          append3.q      42 -heapsize 1638400
  1           cycles.q      15 -heapsize 1638400
- 1         garbage2.q  200000 -heapsize 1638400
+ 1         garbage2.q   20000 -heapsize 1638400
  1      sideeffect3.q      10 -heapsize 1638400
  1             nils.q      42 -heapsize 1638400
  1         sortdet4.q      42 -heapsize 1638400
- 0         isrefint.q      42 -heapsize 1638400
+1 append.q 42 -heapsize 1638400
+1 badappend2.q 42 -heapsize 1638400 # static: mutable func
+1 badappend3.q 42 -heapsize 1638400 # static: mutable var
+1 badappend4.q 42 -heapsize 1638400 # static: missing return
+1 casts2.q 5 -heapsize 1638400
+1 casts2.q 42 -heapsize 1638400 # dynamic: downcast
+1 casts3.q 5 -heapsize 1638400 # static: types/casting
+1 casts4.q 5 -heapsize 1638400
+1 casts5.q 5 -heapsize 1638400 # dynamic: downcast
+1 scope2.q 5 -heapsize 1638400
+1 scope3.q 5 -heapsize 1638400 # static: undefined var
+1 scope4.q 5 -heapsize 1638400 # static: duplicate var
+1 immutablearg.q 5 -heapsize 1638400 # static: mutable var (arg)
+1 mutablearg.q 5 -heapsize 1638400
+1 niloops.q 5 -heapsize 1638400 # dynamic: nil dereference
+1 niloops2.q 5 -heapsize 1638400 # dynamic: downcast
+1 niloops3.q 50 -heapsize 1638400 # dynamic: nil dereference
+1 sortdet4.q 5 -heapsize 1638400
+1 sortdet5.q 5 -heapsize 1638400
+1 sortdet6.q 5 -heapsize 1638400 # static: types/casting
+1 sortdet7.q 5 -heapsize 1638400 # static: missing func
+1 primes5.q 5 -heapsize 1638400 # static: types/casting
+1 misc.q 5 -heapsize 1638400
+1 misc2.q 5 -heapsize 1638400  # static: types/casting
+1 unnecessarymutables.q 42 -heapsize 1638400
+1 depcast.q 1 -heapsize 1638400 # dynamic: downcast
+1 depcast.q 3 -heapsize 1638400
+1 castingabout2.q 42 -heapsize 1638400 
+1 badappend3.q 42 -heapsize 1638400
+1 badappend5.q 21 -heapsize 1638400
+1 casts6.q 5 -heapsize 1638400
+1 casts5.q 10 -heapsize 1638400
+1 scope5.q 3 -heapsize 1638400
+1 sortdet8.q 4 -heapsize 1638400
+1 sortdet8.q 10 -heapsize 1638400
+1 misc3.q 4 -heapsize 1638400
+1 depcast.q 1 -heapsize 1638400
+1 depcast2.q 3 -heapsize 1638400
+1 dynamiccast.q 3 -heapsize 1638400
+1 niloops3.q 2 -heapsize 1638400
+1 niloops4.q 2 -heapsize 1638400
+1 badcast.q 2 -heapsize 1638400
+1 badcast2.q 3 -heapsize 1638400
+1 inputdep2.q 2 -heapsize 1638400
+1 castingabout.q -4 -heapsize 1638400
+1 funcType.q 3 -heapsize 1638400
+1 immutablearg.q 1 -heapsize 1638400 
+1 immutableFunc.q 1 -heapsize 1638400 
+1 immutableFunc2.q 5 -heapsize 1638400
+1 max3.q 0 -heapsize 1638400
+1 scope4.q 10 -heapsize 1638400
+1 niloops5.q 3 -heapsize 1638400
+1 sNewmanConwaySequence.q 16 -heapsize 1638400
+1 updates5.q 8 -heapsize 1638400
+1 sideeffect3.q 15 -heapsize 1638400
+1 sLCS.q 14 -heapsize 1638400
+1 jumpGame.q 3 -heapsize 1638400
+1 fibserial2.q 8 -heapsize 1638400
+1 subarrayProductLessK.q 3 -heapsize 1638400
+1 sReplace.q 45 -heapsize 1638400
+1 sGetMin.q 13 -heapsize 1638400
+1 noisyMutablePara.q 25 -heapsize 1638400
+1 randomList.q 15 -heapsize 1638400
+1 scope6.q 3 -heapsize 1638400
+1 garbage2.q       10000 -heapsize 1638400
+1 updates6.q           42 -heapsize 1638400
+1 primes6.q          200 -heapsize 1638400
+1 serialbubblish.q    42 -heapsize 1638400
+1 fibserial.q         20 -heapsize 1638400
+1 equiv.q             42 -heapsize 1638400
+1 mixedtypes.q        42 -heapsize 1638400
+1 listoflists.q       42 -heapsize 1638400
+1 cycle.q             42 -heapsize 1638400
+1 mutation2.q          42 -heapsize 1638400
+1 serialqsort.q       42 -heapsize 1638400
+1 insertionsort3.q     42 -heapsize 1638400
+0 isrefint.q 42 -heapsize 1638400
