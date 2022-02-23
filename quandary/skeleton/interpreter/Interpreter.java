@@ -71,6 +71,7 @@ public class Interpreter {
         try {
             astRoot = ParserWrapper.parse(reader);
         } catch (Exception ex) {
+            ex.printStackTrace();
             Interpreter.fatalError("Uncaught parsing error: " + ex, Interpreter.EXIT_PARSING_ERROR);
         }
         //astRoot.println(System.out);
