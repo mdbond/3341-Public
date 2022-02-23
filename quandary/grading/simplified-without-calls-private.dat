@@ -1,0 +1,18 @@
+0 isrefint.q 42         # should fail
+2 simple2.q 16
+2 simple3.q 42
+2 simple4.q 42
+2 simple5.q 125
+2 cond8.q 0
+2 cond8.q 1
+2 cond9.q 42
+2 vars3.q 42
+2 morevars3.q 5
+2 morevars3.q 15
+2 morevars4.q 15
+2 compound2.q 1
+2 compound2.q 5
+2 logicCond7.q -1
+2 isPrime.q 15
+2 sMoreNested.q 100
+0 isrefint.q 42         # should fail
