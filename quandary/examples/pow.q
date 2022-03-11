@@ -4,7 +4,7 @@ int pow(int b, int e) {
     return pow(b, e - 1) * b;
 }
 
-Q main(int arg) {
+int main(int arg) {
     int x = arg;
     int y = pow(7, x);
     return y;

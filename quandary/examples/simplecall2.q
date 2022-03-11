@@ -8,7 +8,7 @@ int square(int z) {
     return x;
 }
 
-Q main(int arg) {
+int main(int arg) {
     int x = arg;
     int y = cube(x);
     return y;
