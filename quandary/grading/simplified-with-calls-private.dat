@@ -1,0 +1,20 @@
+0 isrefint.q 42         # should fail
+2 simplecall.q 5
+2 simplecall2.q 5
+2 pow.q 9
+2 pow2.q 9
+2 cj-fn-no-args.q     42
+2 cj-is-odd.q         13
+2 isPrimeImmutable.q 177
+2 factsimple.q 15
+2 oddeven.q 13
+2 lg.q 24645
+2 sPalindrome.q 15951
+1 randomNum3.q 2
+1 precedence3.q 42
+2 cj-fib.q 8
+2 sub.q 23
+2 sqroot.q 5000
+1 samename.q 25
+1 messyFunc.q 100
+0 isrefint.q 42         # should fail
