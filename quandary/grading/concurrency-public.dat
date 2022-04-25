@@ -59,7 +59,6 @@
 2 pcfixed5.q 42 -heapsize 1638400 # relies on concurrent execution
 2 steps3.q 1000 -heapsize 1638400 # relies on concurrent execution
 2 concupdate.q 42 -heapsize 1638400
-2 steps4.q 100 -heapsize 1638400 # relies on concurrent execution
 2 steps5.q 200 -heapsize 1638400 # relies on concurrent execution
 2 steps6.q 50 -heapsize 1638400 # relies on concurrent execution
 2 turns2.q 25 -heapsize 1638400 # relies on concurrent execution
@@ -80,7 +79,6 @@
 6 pcfixed4.q 42 -heapsize 1638400 # relies on concurrent execution
 6 pcfixed5.q 42 -heapsize 1638400 # relies on concurrent execution
 6 steps3.q 1000 -heapsize 1638400 # relies on concurrent execution
-6 steps4.q 100 -heapsize 1638400 # relies on concurrent execution
 6 steps5.q 200 -heapsize 1638400 # relies on concurrent execution
 6 steps6.q 50 -heapsize 1638400 # relies on concurrent execution
 6 turns2.q 25 -heapsize 1638400 # relies on concurrent execution

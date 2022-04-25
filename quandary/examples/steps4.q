@@ -1,3 +1,4 @@
+/* Has a data race */
 
 mutable int doLeftInc(Ref counters, int myThread, int count) {
     mutable int i = 0;
