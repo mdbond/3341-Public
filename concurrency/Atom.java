@@ -13,7 +13,7 @@ public class Atom {
 		} catch (InterruptedException ex) {
 			throw new RuntimeException(ex);
 		}
-		System.out.println("Vector size = " + set.vec.size());
+		System.out.println("Set size = " + set.size());
 	}
 }
 
@@ -26,6 +26,9 @@ class MySet {
 			vec.add(i);
 		}
 	}
+	int size() {
+		return vec.size();
+	}
 }
 
 
@@ -34,7 +37,7 @@ class MyThread extends Thread {
 	final int minValue;
 	final int maxValue;
 	public MyThread(MySet set, int minValue, int maxValue) {
-	this.set = set;
+		this.set = set;
 		this.minValue = minValue;
 		this.maxValue = maxValue;
 	}

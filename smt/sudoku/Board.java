@@ -25,6 +25,8 @@ public class Board {
 		}
 	}
 
+	// TODO: This parsing doesn't work for the output
+	// from more recent versions of z3
 	void applySolution(Solver solver) {
 		String line;
 		while ((line = solver.readLine()) != null && !line.equals(")")) {

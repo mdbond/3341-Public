@@ -36,6 +36,7 @@ public class Polymorphism {
     try {
       System.out.println("p.yearsOfExperience = " + ((Judge)p).yearsOfExperience);
     } catch (ClassCastException ex) {
+      System.out.println(ex);
     }
   }
 }

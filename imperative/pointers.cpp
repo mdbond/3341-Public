@@ -20,7 +20,7 @@ int main() {
 
   cout << "BEFORE FIRST MODIFICATION: p = " << p << ", w = " << w << ", x = " << x << endl;
 
-  *(p + 1) = 5; // same as *((int*)((void*)p + 8)) = 5;
+  *(p - 1) = 5; // same as *((int*)((void*)p - 8)) = 5;
 
   cout << "AFTER MODIFICATIONS:       p = " << p << ", w = " << w << ", x = " << x << endl;
 
